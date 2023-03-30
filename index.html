@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="backgroundStyling">
+      <header class="page_heading">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </header>
+      <div class="main_Window">
+        <div class="main_Window--sliderArea">
+          <div class="main_Window--sliderAreaPricing">
+            <span class="pageviews">10k pageviews</span>
+            <div class="pricingPositioner">
+              <span class="price">$8.00</span>
+              <span class="billingTime">/ month</span>
+            </div>
+          </div>
+          <div class="input_Container">
+            <input
+              onchange="priceCalc()"
+              class="rangeInput"
+              id="rangeInput"
+              value="0"
+              min="0"
+              max="4"
+              step="1"
+              type="range"
+            />
+            <!-- <datalist id="steplist">
+              <option>10K</option>
+              <option>50K</option>
+              <option>100K</option>
+              <option>500K</option>
+              <option>1M</option>
+            </datalist> -->
+          </div>
+          <div class="billing_Container">
+            <p>Monthly Billing</p>
+            <input
+              type="checkbox"
+              class="billingTimeCheckbox"
+              id="billingTimeCheckbox"
+              onchange="discountTracker()"
+            />
+            <label for="billingTimeCheckbox"></label>
+            <p>Yearly Billing</p>
+            <div class="discountContainer">
+              <p>25% discount</p>
+            </div>
+          </div>
+        </div>
+        <div class="main_Window--submitArea">
+          <div class="submitArea_spanContainer">
+            <span class="check1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                <path
+                  fill="none"
+                  stroke="#10D8C4"
+                  stroke-width="2"
+                  d="M1 4.134l1.907 1.908L7.949 1"
+                />
+              </svg>
+              Unlimited websites</span
+            >
+            <span class="check1"
+              ><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                <path
+                  fill="none"
+                  stroke="#10D8C4"
+                  stroke-width="2"
+                  d="M1 4.134l1.907 1.908L7.949 1"
+                />
+              </svg>
+              100% data ownership</span
+            >
+            <span class="check1"
+              ><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                <path
+                  fill="none"
+                  stroke="#10D8C4"
+                  stroke-width="2"
+                  d="M1 4.134l1.907 1.908L7.949 1"
+                />
+              </svg>
+              Email reports</span
+            >
+          </div>
+          <button class="submitButton">Start my trial</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
